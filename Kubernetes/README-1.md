@@ -112,9 +112,15 @@ Service Mesh (Istio/Linkerd): Traffic control, security, observability.
 
 💡 Quick Commands
 kubectl get pods,svc,deploy           # List resources
+
 kubectl describe pod <name>           # Debug pod details
+
 kubectl logs <pod>                    # View pod logs
+
 kubectl exec -it <pod> -- /bin/bash   # Access container shell
+
 kubectl apply -f <file>.yaml          # Apply manifest
+
 kubectl scale deploy <name> --replicas=5
+
 kubectl rollout undo deploy/<name>    # Rollback deployment
