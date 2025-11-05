@@ -1,4 +1,5 @@
 🧩 Kubernetes Interview Cheat Sheet (for DevOps Engineers)
+
 🚀 1. Core Concepts
 
 Pod: Smallest deployable unit; runs one or more containers.
