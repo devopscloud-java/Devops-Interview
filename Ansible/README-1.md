@@ -1,4 +1,5 @@
 🧩 Ansible Concepts for DevOps Engineer — Interview Guide
+
 🚀 What is Ansible?
 
 Ansible is an open-source automation tool used for:
@@ -14,6 +15,7 @@ It is agentless (uses SSH for communication).
 Written in Python and uses YAML for playbooks.
 
 ⚙️ Core Components
+
 🗂️ 1. Inventory
 
 A list of managed nodes where Ansible runs tasks.
@@ -23,7 +25,9 @@ Default: /etc/ansible/hosts
 Supports static and dynamic inventories.
 
 [webservers]
+
 192.168.1.10
+
 192.168.1.11
 
 🔧 2. Modules
