@@ -121,18 +121,18 @@ How can you continue execution and handle the error?
 ✅ Expected Answer:
 
 Use:
-
+<pre>
 ignore_errors: yes
-
+</pre>
 
 or
-
+<pre>
 block:
   - name: risky task
     command: ...
 rescue:
   - debug: msg="Task failed, continuing..."
-
+</pre>
 9. Conditional Execution
 
 Scenario:
@@ -142,11 +142,11 @@ How can you achieve this conditionally?
 
 ✅ Expected Answer:
 
-"- name: Install Nginx
+<pre>- name: Install Nginx
   apt:
     name: nginx
     state: present
-  when: ansible_os_family == "Debian""
+  when: ansible_os_family == "Debian</pre>
 
 10. CI/CD Integration
 
@@ -212,11 +212,11 @@ How will you do it with Ansible?
 
 Use synchronize module (rsync wrapper):
 
-"- name: Sync logs
+<pre>- name: Sync logs
   synchronize:
     src: /var/log/app/
     dest: /central/logs/{{ inventory_hostname }}/
-    mode: pull"
+    mode: pull</pre>
 
 14. Rolling Restart
 
@@ -229,12 +229,12 @@ What’s your approach?
 
 Use:
 
-"serial: 1
+<pre>serial: 1
 tasks:
   - name: Restart tomcat
     service:
       name: tomcat
-      state: restarted"
+      state: restarted</pre>
 
 15. Debugging
 
@@ -247,7 +247,7 @@ How will you debug it?
 
 Use:
 
-- debug: var=variable_name
+<pre>- debug: var=variable_name</pre>
 - Add -vvv flag for verbose output.
 
 -Use Jinja2 filters in templates to inspect ({{ var | to_nice_json }}).
