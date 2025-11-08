@@ -38,17 +38,17 @@ Used to perform specific operations (install package, copy file, start service, 
 
 Example modules: apt, yum, copy, file, service.
 
-- name: Install NGINX
+<pre>- name: Install NGINX
   apt:
     name: nginx
-    state: present
+    state: present</pre>
 
 📜 3. Playbooks
 
 YAML files defining automation tasks.
 
 Contain plays → each play runs tasks on specified hosts.
-
+<pre>
 - name: Install and start NGINX
   hosts: webservers
   tasks:
@@ -61,7 +61,7 @@ Contain plays → each play runs tasks on specified hosts.
       service:
         name: nginx
         state: started
-
+</pre>
 🧱 4. Tasks
 
 Individual actions performed by Ansible using modules.
@@ -69,7 +69,7 @@ Individual actions performed by Ansible using modules.
 🔁 5. Handlers
 
 Used to perform actions only when notified (e.g., restart service after config change).
-
+<pre>
 tasks:
   - name: Copy config file
     copy:
@@ -82,15 +82,15 @@ handlers:
     service:
       name: nginx
       state: restarted
-
+</pre>
 🧮 6. Variables
 
 Make playbooks dynamic and reusable.
 
 Defined in playbooks, inventory, or separate files.
 
-vars:
-  package_name: nginx
+<pre>vars:
+  package_name: nginx</pre>
 
 🧩 7. Templates
 
@@ -104,13 +104,13 @@ Structure to organize playbooks into reusable units.
 
 Directory structure:
 
-roles/
+<pre>roles/
   myrole/
     tasks/
     handlers/
     templates/
     vars/
-    defaults/
+    defaults/</pre>
 
 
 Create a role:
@@ -128,16 +128,16 @@ ansible all -m setup
 ⚖️ 10. Conditionals
 
 Run tasks based on conditions.
-
+<pre>
 - name: Install on Ubuntu
   apt:
     name: nginx
   when: ansible_os_family == "Debian"
-
+</pre>
 🔄 11. Loops
 
 Repeat a task multiple times.
-
+<pre>
 - name: Install multiple packages
   apt:
     name: "{{ item }}"
@@ -146,17 +146,17 @@ Repeat a task multiple times.
     - git
     - curl
     - vim
-
+</pre>
 🏷️ 12. Tags
 
 Execute specific parts of a playbook.
-
+<pre>
 - name: Install NGINX
   apt:
     name: nginx
   tags: install
 
-
+</pre>
 Run:
 
 ansible-playbook playbook.yml --tags "install"
@@ -172,7 +172,7 @@ ansible-vault decrypt file.yml
 ⚠️ 14. Error Handling
 
 Use ignore_errors or block/rescue/always blocks.
-
+<pre>
 - block:
     - name: Task that might fail
       command: /bin/false
@@ -180,7 +180,7 @@ Use ignore_errors or block/rescue/always blocks.
     - name: Handle failure
       debug:
         msg: "Task failed, continuing..."
-
+</pre>
 ☁️ Advanced / DevOps-Focused Concepts
 🌐 15. Dynamic Inventory
 
