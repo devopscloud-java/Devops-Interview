@@ -78,11 +78,3 @@ If you have new questions or real-world interview experiences, open a **pull req
 
 ---
 
-## 🧾 License
-
-This repository is licensed under the **MIT License** – free to use, learn, and share.
-
----
-
-**⭐ Don’t forget to star this repo** if you find it useful!
-**#DevOps #InterviewPreparation #Jenkins #Docker #Kubernetes #AWS #Terraform**
