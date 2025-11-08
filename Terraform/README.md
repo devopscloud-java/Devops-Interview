@@ -36,12 +36,12 @@ Variables make configurations dynamic; outputs display useful information after 
 
 Example:
 
-variable "instance_type" {
+<pre>variable "instance_type" {
   default = "t2.micro"
 }
 output "instance_ip" {
   value = aws_instance.web.public_ip
-}
+}</pre>
 
 7. What is a Terraform Module?
 
@@ -85,12 +85,12 @@ You have multiple developers working with Terraform. How do you avoid conflicts 
 
 ✅ Use remote backend (e.g., S3 + DynamoDB for state locking):
 
-backend "s3" {
+<pre>backend "s3" {
   bucket         = "my-terraform-state"
   key            = "dev/terraform.tfstate"
   region         = "us-east-1"
   dynamodb_table = "terraform-lock"
-}
+}</pre>
 
 13. Scenario 5:
 
@@ -109,7 +109,7 @@ You want to deploy the same infrastructure across multiple regions. How do you a
 
 ✅ Use modules and for_each or count:
 
-variable "regions" {
+<pre>variable "regions" {
   default = ["us-east-1", "us-west-2"]
 }
 
@@ -117,7 +117,7 @@ module "servers" {
   for_each = toset(var.regions)
   source   = "./modules/ec2"
   region   = each.key
-}
+}</pre>
 
 💡 Advanced & Real-World Scenarios
 15. Scenario 7:
@@ -126,9 +126,9 @@ How do you handle version control in Terraform modules?
 
 ✅ Use a specific tag or commit in module source:
 
-module "network" {
+<pre>module "network" {
   source  = "git::https://github.com/myorg/network.git?ref=v1.0.0"
-}
+}</pre>
 
 16. Scenario 8:
 
