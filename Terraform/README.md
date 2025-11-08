@@ -19,9 +19,9 @@ Providers are plugins used to interact with cloud platforms (AWS, Azure, GCP, et
 
 Example:
 
-<pre> ```provider "aws" {
+<pre> provider "aws" {
   region = "us-east-1"
-}``` </pre>
+} </pre>
 
 5. What is Terraform Plan and Apply?
 
