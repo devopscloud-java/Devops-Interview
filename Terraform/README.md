@@ -35,6 +35,7 @@ terraform plan: Previews changes before applying them.
 terraform apply: Executes the planned actions to create/update resources.
 
 ⚙️ Intermediate Questions
+
 6. What are Variables and Outputs in Terraform?
 
 Variables make configurations dynamic; outputs display useful information after deployment.
@@ -51,6 +52,7 @@ output "instance_ip" {
 7. What is a Terraform Module?
 
 A reusable set of Terraform configurations.
+
 Example: A module for EC2 + Security Group + KeyPair used across environments.
 
 8. What is Terraform Workspace?
@@ -58,6 +60,7 @@ Example: A module for EC2 + Security Group + KeyPair used across environments.
 Workspaces allow multiple environments (dev, test, prod) using the same configuration but separate state files.
 
 🧩 Scenario-Based Questions
+
 9. Scenario 1:
 
 You deployed an EC2 instance using Terraform. Later, someone manually terminated it in AWS. What happens when you run terraform apply again?
@@ -125,6 +128,7 @@ module "servers" {
 }</pre>
 
 💡 Advanced & Real-World Scenarios
+
 15. Scenario 7:
 
 How do you handle version control in Terraform modules?
@@ -154,6 +158,7 @@ If corrupted, use terraform state rm or terraform refresh.
 How do you roll back infrastructure changes?
 
 ✅ Terraform doesn’t have a direct rollback command.
+
 You need to:
 
 Restore a previous .tfstate version (from S3 versioning, Git, etc.)
