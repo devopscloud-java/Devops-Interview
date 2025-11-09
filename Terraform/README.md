@@ -4,12 +4,14 @@
 Terraform is an open-source Infrastructure as Code (IaC) tool that lets you define and provision infrastructure using declarative configuration files.
 
 2. Difference between Terraform and Ansible/Puppet/Chef?
+   
 Feature	Terraform	Ansible
 Type	IaC (Provisioning)	Configuration Management
 Language	HCL (Declarative)	YAML (Procedural)
 Execution	Creates immutable infrastructure	Manages existing infrastructure
 State Management	Yes (terraform.tfstate)	No
-3. What is Terraform State File?
+
+4. What is Terraform State File?
 
 It’s a local or remote file (terraform.tfstate) that keeps track of the real-world infrastructure Terraform manages.
 
