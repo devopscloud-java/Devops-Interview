@@ -5,14 +5,14 @@ Terraform is an open-source Infrastructure as Code (IaC) tool that lets you defi
 
 2. Difference between Terraform and Ansible/Puppet/Chef?
    
-Feature	          |         Terraform	                     |              Ansible
+<pre>Feature	          |         Terraform	                     |              Ansible
 Type	             |     IaC (Provisioning)	               |        Configuration Management
 
 Language 	       |    HCL (Declarative)	                  |         YAML (Procedural)
 
 Execution	       |    Creates immutable infrastructure	   |         Manages existing infrastructure
 
-State Management	 |  Yes (terraform.tfstate)	             |          No
+State Management	 |  Yes (terraform.tfstate)	             |          No</pre>
 
 4. What is Terraform State File?
 
